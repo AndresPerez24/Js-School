@@ -11,7 +11,8 @@ class App extends Component {
     sideBarLeftOpen: false,
     books: [],
     bookshelfTypes: [],
-    selectedBookshelf: ""
+    selectedBookshelf: "",
+    search: ""
   };
 
   componentDidMount() {
@@ -25,7 +26,7 @@ class App extends Component {
       .catch(function(error) {
         // handle error
         console.log(error);
-      });
+      }); 
   }
 
   toggleSideBarRight = () => {
@@ -40,10 +41,11 @@ class App extends Component {
     return lodash.uniq(books.map(book => book.bookshelf)).sort();
   };
 
-  filterBooksByBookshelf = bookshelf => {
+  filterBooksByBookshelf = (params = {}) => {
+    const { bookshelf } = params;
     axios
       .get("books", {
-        params: { bookshelf }
+        params
       })
       .then(response => {
         const books = response.data.books;
@@ -53,6 +55,17 @@ class App extends Component {
         // handle error
         console.log(error);
       });
+  };
+
+  setSearch = value => {
+    const DebounceSearchBooks = 
+    lodash.debounce(() => {
+      this.filterBooksByBookshelf({
+        bookshelf: this.state.selectedBookshelf,
+        search: value
+      })
+    } , 500, { 'maxWait': 3000 });
+      DebounceSearchBooks();
   };
 
   render() {
@@ -65,7 +78,7 @@ class App extends Component {
     } = this.state;
     return (
       <div className="App">
-        <Header />
+        <Header setSearch={this.setSearch} />
         <Container flex justifyContent="space-between" padding="0 20px">
           <Button onClick={this.toggleSideBarLeft}>SideBar Left</Button>
           <Button onClick={this.toggleSideBarRight}>SideBar Right</Button>

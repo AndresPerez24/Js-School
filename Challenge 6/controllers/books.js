@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const config = require("../config");
 
 function createMultipleBooks(req, resolve, reject) {
-  const isbn = req.body.isbn
+  const isbn = req.body.isbn;
   const city = req.body.city;
   const copies = req.body.copies;
   const url = `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`;
@@ -21,10 +21,6 @@ function createMultipleBooks(req, resolve, reject) {
       book.publisher = content.items[0].volumeInfo.publisher;
       book.publishedDate = content.items[0].volumeInfo.publishedDate;
       book.description = content.items[0].volumeInfo.description;
-      book.isbn_13 =
-        content.items[0].volumeInfo.industryIdentifiers[0].identifier;
-      book.isbn_10 =
-        content.items[0].volumeInfo.industryIdentifiers[1].identifier;
       book.pageCount = content.items[0].volumeInfo.pageCount;
       book.printType = content.items[0].volumeInfo.printType;
       book.categories = content.items[0].volumeInfo.categories;
@@ -40,15 +36,23 @@ function createMultipleBooks(req, resolve, reject) {
         }
       });
     } catch (err) {
-      reject(`Error making the request, try with another isbn number`);
+      reject(`Error making the request`);
     }
   }
   getBook(url);
 }
 
-function getAllBooks(req, res) {
-  const bookshelf = req.query.bookshelf;
-  if (bookshelf) {
+async function getAllBooks(req, res) {
+  const { bookshelf, search } = req.query;
+  if (search) {
+    const regex = new RegExp(`${search}`,'i');
+    const query = { title: { $regex: regex } }
+      if (bookshelf) {
+        query.bookshelf = bookshelf
+      }
+    const books = await Book.find(query);
+    res.send({books});
+  } else if (bookshelf) {
     Book.find({ bookshelf }, (err, books) => {
       if (err) {
         res.status(500).send({
@@ -56,7 +60,7 @@ function getAllBooks(req, res) {
         });
       } else if (!books) {
         res.status(404).send({
-          message: "We do not have books in that bookshelf right now"
+          message: "We do not have books at the moment"
         });
       } else {
         res.status(200).send({

@@ -8,16 +8,12 @@ class SideBarRight extends Component {
     return (
       <SideBar isOpen={this.props.isOpen}>
         <Container>
-        {/*  <button onClick={this.props.toggleSideBarRight}>X</button>  */}
+          {/*  <button onClick={this.props.toggleSideBarRight}>X</button>  */}
           <Title>Most read books</Title>
           <List>
             {books.slice(0, 5).map(book => (
-                <ListItem
-                  key={book.title}
-                >
-                {book.title}
-                </ListItem>
-              ))}
+              <ListItem key={book.title}>{book.title}</ListItem>
+            ))}
           </List>
         </Container>
       </SideBar>
@@ -35,7 +31,7 @@ const SideBar = styled.div`
     right: -200px;
     width: 200px;
     transition: 0.3s;
-    ${props => (props.isOpen && Open)}
+    ${props => props.isOpen && Open}
 
     @media ${Device.laptop} {
         right: 0;

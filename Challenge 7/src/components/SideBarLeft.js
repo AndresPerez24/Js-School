@@ -4,7 +4,11 @@ import { Container, Device } from "../styles/index";
 
 class SideBarLeft extends Component {
   render() {
-    const { bookshelfTypes, filterBooksByBookshelf, selectedBookshelf } = this.props;
+    const {
+      bookshelfTypes,
+      filterBooksByBookshelf,
+      selectedBookshelf
+    } = this.props;
     return (
       <SideBar isOpen={this.props.isOpen}>
         <Container>
@@ -13,7 +17,7 @@ class SideBarLeft extends Component {
             {bookshelfTypes.map(bookshelf => (
               <ListItem
                 isSelected={bookshelf === selectedBookshelf}
-                onClick={() => filterBooksByBookshelf(bookshelf)}
+                onClick={() => filterBooksByBookshelf({bookshelf})}
                 key={bookshelf}
               >
                 {bookshelf}
@@ -70,7 +74,7 @@ const ListItem = styled.li`
   ${props => (props.isSelected ? ColorSelected : "")};
 `;
 
-const ColorSelected = css `
+const ColorSelected = css`
   color: white;
 `;
 

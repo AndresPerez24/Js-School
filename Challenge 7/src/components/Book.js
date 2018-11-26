@@ -48,7 +48,7 @@ const ImgContainer = styled.div`
   max-width: 140px;
   max-height: 160px;
   width: 100%;
-  height: 100%;    
+  height: 100%;
   margin: 0 auto;
 
   @media ${Device.tablet} {
@@ -60,7 +60,7 @@ const ImgContainer = styled.div`
     max-height: 180px;
   }
 
-    @media ${Device.laptopL} {
+  @media ${Device.laptopL} {
     max-height: 250px;
   }
 `;

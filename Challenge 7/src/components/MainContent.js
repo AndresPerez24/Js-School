@@ -19,8 +19,8 @@ class MainContent extends Component {
   };
 
   render() {
-    const { selectedBook, isModalOpen } = this.state
-    const { books } = this.props
+    const { selectedBook, isModalOpen } = this.state;
+    const { books } = this.props;
     return (
       <Content>
         <Container padding="10px 50px 0 20px">
