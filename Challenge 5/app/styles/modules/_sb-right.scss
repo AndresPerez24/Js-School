@@ -1,0 +1,19 @@
+.sb-right {
+    width: 15%;
+    background-color: #353132;
+    height: calc(100vh - 80px);
+    padding-top: 40px;
+
+    &__list {
+        color: #FCF8F3;
+        font-size: 13px;
+    }
+
+    &__list-item {
+        color: #FCF8F3;
+        margin-top: 30px;
+        list-style: none;
+        font-size: 12px;
+        text-transform: lowercase;
+    }
+}

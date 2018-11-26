@@ -1,0 +1,643 @@
+
+ [
+    {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "The story of Google",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+         "authors": [
+          "David A. Vise"
+         ],
+         "publishedDate": "2005-11-15",
+        "description": "Here is the story behind one of the most remarkable Interne successes of our time. Based on scrupulous research and extraordinary access to Google.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+     {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "Steve Jobs",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+         "authors": [
+          "Jose Martinez"
+         ],
+         "publishedDate": "1989-02-01",
+        "description": "Draws on more than forty interviews with Steve Jobs, as well as interviews with family members, friends, competitors, and colleagues to offer a look at the co-founder and leading creative force behind the Apple computer company.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+       {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "The story of Google",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+         "authors": [
+          "David A. Vise"
+         ],
+         "publishedDate": "2005-11-15",
+        "description": "Here is the story behind one of the most remarkable Interne successes of our time. Based on scrupulous research and extraordinary access to Google.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+       {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "Steve Jobs",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+         "authors": [
+          "Walter Isaacson"
+         ],
+         "publishedDate": "1989-02-01",
+        "description": "Draws on more than forty interviews with Steve Jobs, as well as interviews with family members, friends, competitors, and colleagues to offer a look at the co-founder and leading creative force behind the Apple computer company.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+       {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "The story of Google",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+         "authors": [
+          "David A. Vise"
+         ],
+         "publishedDate": "2005-11-15",
+        "description": "Here is the story behind one of the most remarkable Interne successes of our time. Based on scrupulous research and extraordinary access to Google.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "Steve Jobs",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+         "authors": [
+          "Walter Isaacson"
+         ],
+         "publishedDate": "1989-02-01",
+        "description": "Draws on more than forty interviews with Steve Jobs, as well as interviews with family members, friends, competitors, and colleagues to offer a look at the co-founder and leading creative force behind the Apple computer company.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "The story of Google",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+         "authors": [
+          "David A. Vise"
+         ],
+         "publishedDate": "2005-11-15",
+        "description": "Here is the story behind one of the most remarkable Interne successes of our time. Based on scrupulous research and extraordinary access to Google.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+     {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "Steve Jobs",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+         "authors": [
+          "Jose Martinez"
+         ],
+         "publishedDate": "1989-02-01",
+        "description": "Draws on more than forty interviews with Steve Jobs, as well as interviews with family members, friends, competitors, and colleagues to offer a look at the co-founder and leading creative force behind the Apple computer company.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+       {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "The story of Google",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+         "authors": [
+          "David A. Vise"
+         ],
+         "publishedDate": "2005-11-15",
+        "description": "Here is the story behind one of the most remarkable Interne successes of our time. Based on scrupulous research and extraordinary access to Google.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       },
+       {
+        "kind": "books#volume",
+        "id": "NebdAQAACAAJ",
+        "etag": "frCB6/KAYeU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/NebdAQAACAAJ",
+        "volumeInfo": {
+         "title": "Steve Jobs",
+         "subtitle": "a review of the events of 1988 ; the annual supplement to the World book encyclopedia",
+         "smallThumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+         "thumbnail": "http://books.google.com/books/content?id=beSP5CCpiGUC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+         "authors": [
+          "Walter Isaacson"
+         ],
+         "publishedDate": "1989-02-01",
+        "description": "Draws on more than forty interviews with Steve Jobs, as well as interviews with family members, friends, competitors, and colleagues to offer a look at the co-founder and leading creative force behind the Apple computer company.",
+         "industryIdentifiers": [
+          {
+           "type": "ISBN_10",
+           "identifier": "0716604892"
+          },
+          {
+           "type": "ISBN_13",
+           "identifier": "9780716604891"
+          }
+         ],
+         "readingModes": {
+          "text": false,
+          "image": false
+         },
+         "pageCount": 576,
+         "printType": "BOOK",
+         "categories": [
+          "Reference"
+         ],
+         "maturityRating": "NOT_MATURE",
+         "allowAnonLogging": false,
+         "contentVersion": "preview-1.0.0",
+         "language": "en",
+         "previewLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&cd=1&source=gbs_api",
+         "infoLink": "http://books.google.com.co/books?id=NebdAQAACAAJ&dq=isbn:0716604892&hl=&source=gbs_api",
+         "canonicalVolumeLink": "https://books.google.com/books/about/The_1989_World_Book_year_book.html?hl=&id=NebdAQAACAAJ"
+        },
+        "saleInfo": {
+         "country": "CO",
+         "saleability": "NOT_FOR_SALE",
+         "isEbook": false
+        },
+        "accessInfo": {
+         "country": "CO",
+         "viewability": "NO_PAGES",
+         "embeddable": false,
+         "publicDomain": false,
+         "textToSpeechPermission": "ALLOWED",
+         "epub": {
+          "isAvailable": false
+         },
+         "pdf": {
+          "isAvailable": false
+         },
+         "webReaderLink": "http://play.google.com/books/reader?id=NebdAQAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+         "accessViewStatus": "NONE",
+         "quoteSharingAllowed": false
+        }
+       }
+]

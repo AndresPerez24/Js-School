@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bookshelf</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+
+    
+    <header class="header">
+      <div class="header__logo">
+        <img src="../images/logo.png" alt="logo"/>
+      </div>
+      <div class="header__search">
+        <h1 class="header__title">Bookshelf</h1>
+        <input class="header__input" type="text" placeholder="Search"/>
+      </div>
+      <div class="header__login">
+        <p class="header__name">Andres Perez</p>
+        <span class="header__circle">
+          <img src="../images/profile_img.png" alt=""/>
+        </span>
+      </div>
+    </header>
+    
+    <div class="flex">
+      <div class="sb-left">
+        <ul class="sb-left__list uppercase">
+          Main
+          <li class="sb-left__list-item">Quito</li>
+          <li class="sb-left__list-item">Cartagena</li>
+          <li class="sb-left__list-item">Medellin</li>
+        </ul>
+        <ul class="sb-left__list">New Releases</ul>
+        <ul class="sb-left__list uppercase ">
+          Your books
+          <li class="sb-left__list-item">Readings</li>
+          <li class="sb-left__list-item">History</li>
+          <li class="sb-left__list-item">Read Later</li>
+          <li class="sb-left__list-item">Favorites</li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="container">
+          <div class="flex justify-content-space-between  align-items-center">
+            <h2 class="content__title">New Releases</h2>
+            <div class="filters flex">
+              <p class="content__filter content__filter--line">Release Date</p>
+              <p class="content__filter">Papularity</p>
+            </div>
+            <p class="content__th">th-list</p>
+          </div>
+          <div class="flex flex-wrap content__books">
+          </div>
+        </div>
+      </div>
+      <div class="sb-right">
+        <ul class="sb-right__list uppercase">
+          Most read books
+          <li class="sb-right__list-item">1. How google works</li>
+          <li class="sb-right__list-item">1. How google works</li>
+          <li class="sb-right__list-item">1. How google works</li>
+          <li class="sb-right__list-item">1. How google works</li>
+          <li class="sb-right__list-item">1. How google works</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
