@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/AndresPerez24/Js-School#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.22.2",
     "mongodb": "^3.1.10",
     "mongoose": "^5.3.13",
     "node-fetch": "^2.3.0"
