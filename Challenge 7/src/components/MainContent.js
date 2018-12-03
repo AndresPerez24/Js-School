@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Books from "./Book";
-import { Container, Device } from "../styles/index";
-import { Popup } from "../components";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import Books from './Book';
+import { Container, Device } from '../styles/index';
+import { Popup } from '.';
 
 class MainContent extends Component {
   state = {
     selectedBook: {},
-    isModalOpen: false
+    isModalOpen: false,
   };
 
-  onSelectBook = book => {
+  onSelectBook = (book) => {
     this.setState({ selectedBook: book, isModalOpen: true });
   };
 
@@ -29,11 +30,7 @@ class MainContent extends Component {
           </Container>
           <ContainerBooks>
             {books.map(book => (
-              <Books
-                onSelectBook={this.onSelectBook}
-                book={book}
-                key={book._id}
-              />
+              <Books onSelectBook={this.onSelectBook} book={book} key={book._id} />
             ))}
           </ContainerBooks>
           <Popup
@@ -69,5 +66,13 @@ const Title = styled.h2`
     font-size: 20px;
   }
 `;
+
+MainContent.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 
 export default MainContent;

@@ -1,9 +1,13 @@
-import React, { Component } from "react";
-import { Header, MainContent, SideBarLeft, SideBarRight } from "./components";
-import styled from "styled-components";
-import { Container, Device } from "./styles/index";
-import axios from "./lib/axios";
-import lodash from "lodash";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import lodash from 'lodash';
+import {
+  Header, MainContent, SideBarLeft, SideBarRight,
+} from './components';
+import { Container, Device } from './styles/index';
+import axios from './lib/axios';
+import { getToken } from './util/auth';
 
 class App extends Component {
   state = {
@@ -11,61 +15,62 @@ class App extends Component {
     sideBarLeftOpen: false,
     books: [],
     bookshelfTypes: [],
-    selectedBookshelf: "",
-    search: ""
+    selectedBookshelf: '',
   };
 
-  componentDidMount() {
-    axios
-      .get("books")
-      .then(response => {
-        const books = response.data.books;
-        const bookshelfTypes = this.getBookshelfTypes(books);
-        this.setState({ books, bookshelfTypes });
-      })
-      .catch(function(error) {
-        // handle error
-        console.log(error);
-      }); 
-  }
+  componentDidMount = () => {
+    const {
+      match: {
+        params: { book },
+      },
+    } = this.props;
+    this.filterBooksByBookshelf({ bookshelf: book || '' });
+    axios.get('books', {
+      headers: { Authorization: `Bearer ${getToken()}` },
+    }).then((response) => {
+      const { books } = response.data;
+      this.setState({ books });
+      const bookshelfTypes = this.getBookshelfTypes(books);
+      this.setState({ bookshelfTypes });
+    });
+  };
 
   toggleSideBarRight = () => {
-    this.setState({ sideBarRightOpen: !this.state.sideBarRightOpen });
+    this.setState(previousState => ({ sideBarRightOpen: !previousState.sideBarRightOpen }));
   };
 
   toggleSideBarLeft = () => {
-    this.setState({ sideBarLeftOpen: !this.state.sideBarLeftOpen });
+    this.setSearch(previousState => ({ sideBarLeftOpen: !previousState.sideBarLeftOpen }));
   };
 
-  getBookshelfTypes = books => {
-    return lodash.uniq(books.map(book => book.bookshelf)).sort();
-  };
+  getBookshelfTypes = books => lodash.uniq(books.map(book => book.bookshelf)).sort();
 
   filterBooksByBookshelf = (params = {}) => {
     const { bookshelf } = params;
     axios
-      .get("books", {
-        params
+      .get('books', {
+        headers: { Authorization: `Bearer ${getToken()}` },
+        params,
       })
-      .then(response => {
-        const books = response.data.books;
+      .then((response) => {
+        const { books } = response.data;
         this.setState({ books, selectedBookshelf: bookshelf });
-      })
-      .catch(function(error) {
-        // handle error
-        console.log(error);
       });
   };
 
-  setSearch = value => {
-    const DebounceSearchBooks = 
-    lodash.debounce(() => {
-      this.filterBooksByBookshelf({
-        bookshelf: this.state.selectedBookshelf,
-        search: value
-      })
-    } , 500, { 'maxWait': 3000 });
-      DebounceSearchBooks();
+  setSearch = (value) => {
+    const { selectedBookshelf } = this.state;
+    const DebounceSearchBooks = lodash.debounce(
+      () => {
+        this.filterBooksByBookshelf({
+          bookshelf: selectedBookshelf,
+          search: value,
+        });
+      },
+      500,
+      { maxWait: 3000 },
+    );
+    DebounceSearchBooks();
   };
 
   render() {
@@ -74,7 +79,7 @@ class App extends Component {
       sideBarRightOpen,
       sideBarLeftOpen,
       bookshelfTypes,
-      selectedBookshelf
+      selectedBookshelf,
     } = this.state;
     return (
       <div className="App">
@@ -89,9 +94,8 @@ class App extends Component {
             toggleSideBarLeft={this.toggleSideBarLeft}
             bookshelfTypes={bookshelfTypes}
             filterBooksByBookshelf={this.filterBooksByBookshelf}
-            selectedBookshelf={selectedBookshelf}
           />
-          <MainContent books={books} />
+          <MainContent selectedBookshelf={selectedBookshelf} books={books} />
           <SideBarRight
             isOpen={sideBarRightOpen}
             toggleSideBarRight={this.toggleSideBarRight}
@@ -116,7 +120,7 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   line-height: 1.5;
-  font: 700 1.2rem "Roboto Slab", sans-serif;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
   padding: 10px 10px;
   font-size: 12px;
   letter-spacing: 0.05rem;
@@ -125,5 +129,13 @@ const Button = styled.button`
     display: none;
   }
 `;
+
+App.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      books: PropTypes.string,
+    }),
+  }).isRequired,
+};
 
 export default App;

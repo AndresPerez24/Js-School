@@ -1,21 +1,19 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Device } from "../styles/index";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Device } from '../styles/index';
 
-class Books extends Component {
-  render() {
-    const { book, onSelectBook } = this.props;
-
-    return (
-      <Book onClick={() => onSelectBook(book)}>
-        <ImgContainer>
-          <BookImage src={book.imageLink} alt="" />
-        </ImgContainer>
-        <Title>{book.title}</Title>
-        <SubTitle>{book.authors.join(", ")}</SubTitle>
-      </Book>
-    );
-  }
+function Books(props) {
+  const { book, onSelectBook } = props;
+  return (
+    <Book onClick={() => onSelectBook(book)}>
+      <ImgContainer>
+        <BookImage src={book.imageLink} alt="" />
+      </ImgContainer>
+      <Title>{book.title}</Title>
+      <SubTitle>{book.authors.join(', ')}</SubTitle>
+    </Book>
+  );
 }
 
 const Book = styled.div`
@@ -84,5 +82,14 @@ const SubTitle = styled.h3`
   font-size: 13px;
   color: #aeaeae;
 `;
+
+Books.propTypes = {
+  onSelectBook: PropTypes.func.isRequired,
+  book: PropTypes.shape({
+    imageLink: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    authors: PropTypes.arrayOf(PropTypes.string.isRequired),
+  }).isRequired,
+};
 
 export default Books;
