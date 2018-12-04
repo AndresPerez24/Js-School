@@ -1,0 +1,36 @@
+{
+  "name": "challenge-5",
+  "version": "1.0.0",
+  "description": "Back-end Bookshelf Node.js and Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "populate": "node DB-info.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresPerez24/Js-School.git"
+  },
+  "author": "Andres Perez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndresPerez24/Js-School/issues"
+  },
+  "homepage": "https://github.com/AndresPerez24/Js-School#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.13",
+    "mongoose-paginate": "^5.0.3",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "nodemon": "^1.18.6"
+  }
+}
