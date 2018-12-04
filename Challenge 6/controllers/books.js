@@ -1,6 +1,6 @@
-const Book = require('../models/books');
-const fetch = require('node-fetch');
-const config = require('../config');
+const Book = require("../models/books");
+const fetch = require("node-fetch");
+const config = require("../config");
 
 function createMultipleBooks(req, resolve, reject) {
   const isbn = req.body.isbn;
@@ -16,7 +16,7 @@ function createMultipleBooks(req, resolve, reject) {
   async function getBook(url) {
     try {
       const content = await fetch(url).then(async res => res.json());
-      if (content) {
+      if(content) {
         book.title = content.items[0].volumeInfo.title;
         book.authors = content.items[0].volumeInfo.authors;
         book.publisher = content.items[0].volumeInfo.publisher;
@@ -29,7 +29,6 @@ function createMultipleBooks(req, resolve, reject) {
         book.imageLink = content.items[0].volumeInfo.imageLinks.thumbnail;
         book.language = content.items[0].volumeInfo.language;
       }
-
       book.save((err, bookStored) => {
         if (err) {
           reject(`Error saving the book ${bookStored.title}`);
@@ -47,22 +46,22 @@ function createMultipleBooks(req, resolve, reject) {
 async function getAllBooks(req, res) {
   const { bookshelf, search } = req.query;
   if (search) {
-    const regex = new RegExp(`${search}`, 'i');
-    const query = { title: { $regex: regex } };
-    if (bookshelf) {
-      query.bookshelf = bookshelf;
-    }
+    const regex = new RegExp(`${search}`,'i');
+    const query = { title: { $regex: regex } }
+      if (bookshelf) {
+        query.bookshelf = bookshelf
+      }
     const books = await Book.find(query);
-    res.send({ books });
+    res.send({books});
   } else if (bookshelf) {
     Book.find({ bookshelf }, (err, books) => {
       if (err) {
         res.status(500).send({
           message: `Error making the request ${err}`
         });
-      } else if (books.length === 0) {
+      } else if (!books) {
         res.status(404).send({
-          message: 'We do not have books at the moment'
+          message: "We do not have books at the moment"
         });
       } else {
         res.status(200).send({
@@ -76,9 +75,9 @@ async function getAllBooks(req, res) {
         res.status(500).send({
           message: `Error making the request ${err}`
         });
-      } else if (books.length < 1) {
+      } else if (!books) {
         res.status(404).send({
-          message: 'We do not have books right now'
+          message: "We do not have books right now"
         });
       } else {
         res.status(200).send({
@@ -98,7 +97,7 @@ function getBook(req, res) {
       });
     } else if (!book) {
       res.status(404).send({
-        message: 'That book does not exist'
+        message: "That book does not exist"
       });
     } else {
       res.status(200).send({
@@ -117,7 +116,7 @@ function lendBook(req, res) {
       });
     } else if (!book) {
       res.status(404).send({
-        message: 'That book does not exist'
+        message: "That book does not exist"
       });
     } else if (book.availableCopies <= 0) {
       res.status(404).send({
