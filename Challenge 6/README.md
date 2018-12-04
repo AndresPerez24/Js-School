@@ -1,20 +1,42 @@
-Challenge CO6
-Backend endpoints
+## How to Install and use the API
 
-Install the dependencies:
+### prerequisites
 
-    npm install
+- clone the repository
+- Install the dependencies:
+  ```
+      npm install
+  ```
+- Set your own environmental variables in the file .env
+- download MongoDB, install it, open a terminal and run:
+  ```
+      mongod
+  ```
+- To autofill the database:
 
-Set your own environmental variables in the file .env
+  ```
+    npm run populate
+  ```
 
-download MongoDB, install it, open a terminal and use the following command to start the database:
+- Preparing the environment:
 
-    mongod
+  open .env file and change the values when required, the environment is already set with default values for developers
 
-To autofill the database with the following command:
+- Run the project with:
+  ```
+      npm start
+  ```
+- Create a user using postman in order to have access to the Bookshelf:
 
-  npm run populate
-  
-Run the project with:
+    -   Open postman and make a post request to http://localhost:{PORT}/signup
 
-    npm start
+        Go to body and use the following syntax in order to create a new user:
+        {
+            "email": "",
+            "password" : ""
+        }
+
+                In order to see if the user was succesfully created, paste the following code in the termial were mongo is currently running
+    ```
+        db.users.find().pretty()
+    ```

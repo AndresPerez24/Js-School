@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import axios from '../lib/axios';
+import logo from '../img/logo.png';
 
 class Login extends Component {
   state = {
@@ -36,7 +37,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div onSubmit={this.handleSubmit}>
+      <LogIn onSubmit={this.handleSubmit}>
+        <img src={logo} alt="logo" />
         <form>
           <Input onChange={this.handleChange} type="email" name="email" placeholder="email" />
           <Input
@@ -47,24 +49,30 @@ class Login extends Component {
           />
           <Button>Sign In</Button>
         </form>
-      </div>
+      </LogIn>
     );
   }
 }
 
+const LogIn = styled.div`
+  max-width: 500px;
+  margin: 70px auto 0;
+  text-align: center;
+`;
+
 const Input = styled.input`
   border: 1px solid black;
-  padding: 2px 10px;
+  padding: 4px 10px 4px 10px;
+  width: 100%;
+  max-width: 205px;
   margin: 18px 4px 0 4px;
   color: black;
   font-size: 14px;
+  border-radius: 5px;
 `;
 
 const Button = styled.button`
-  position: relative;
   margin: 15px 0 5px 0;
-  left: 50%;
-  transform: translateX(-50%);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -72,11 +80,11 @@ const Button = styled.button`
   width: 85%;
   font-size: 14px;
   cursor: pointer;
-  background-color: red;
+  background-color: #6ec1e4;
 `;
 
 Login.propTypes = {
-  history: PropTypes.func.isRequired,
+  history: PropTypes.shape({}).isRequired,
 };
 
 export default Login;

@@ -24,15 +24,19 @@ class App extends Component {
         params: { book },
       },
     } = this.props;
-    this.filterBooksByBookshelf({ bookshelf: book || '' });
-    axios.get('books', {
-      headers: { Authorization: `Bearer ${getToken()}` },
-    }).then((response) => {
-      const { books } = response.data;
-      this.setState({ books });
-      const bookshelfTypes = this.getBookshelfTypes(books);
-      this.setState({ bookshelfTypes });
-    });
+    axios
+      .get('books', {
+        headers: { Authorization: `Bearer ${getToken()}` },
+      })
+      .then((response) => {
+        const { books } = response.data;
+        this.setState({ books });
+        const bookshelfTypes = this.getBookshelfTypes(books);
+        this.setState({ bookshelfTypes });
+      });
+    if (book !== 'Books') {
+      this.filterBooksByBookshelf({ bookshelf: book });
+    }
   };
 
   toggleSideBarRight = () => {
