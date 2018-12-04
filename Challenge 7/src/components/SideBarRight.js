@@ -1,27 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { Container, Device } from '../styles/index';
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
+import { Container, Device } from "../styles/index";
 
-function SideBarRight(props) {
-  const { books, isOpen } = props;
-  return (
-    <SideBar isOpen={isOpen}>
-      <Container>
-        <Title>Most read books</Title>
-        <List>
-          {books.slice(0, 5).map(book => (
-            <ListItem key={book.title}>{book.title}</ListItem>
-          ))}
-        </List>
-      </Container>
-    </SideBar>
-  );
+class SideBarRight extends Component {
+  render() {
+    const { books } = this.props;
+    return (
+      <SideBar isOpen={this.props.isOpen}>
+        <Container>
+          {/*  <button onClick={this.props.toggleSideBarRight}>X</button>  */}
+          <Title>Most read books</Title>
+          <List>
+            {books.slice(0, 5).map(book => (
+              <ListItem key={book.title}>{book.title}</ListItem>
+            ))}
+          </List>
+        </Container>
+      </SideBar>
+    );
+  }
 }
-
-const Open = css`
-  right: 0;
-`;
 
 const SideBar = styled.div`
     background-color: #353132;
@@ -39,6 +37,10 @@ const SideBar = styled.div`
         right: 0;
         width: 250px;
   }
+`;
+
+const Open = css`
+  right: 0;
 `;
 
 const Title = styled.h3`
@@ -59,14 +61,5 @@ const ListItem = styled.li`
   margin-top: 30px;
   font-size: 13px;
 `;
-
-SideBarRight.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-};
 
 export default SideBarRight;

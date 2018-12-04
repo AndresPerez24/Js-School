@@ -1,32 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import logo from '../img/logo.png';
-import { Device } from '../styles/index';
+import React, { Component } from "react";
+import styled from "styled-components";
+import logo from "./../img/logo.png";
+import { Device } from "../styles/index";
 
-function Header(props) {
-  const { setSearch } = props;
-  return (
-    <HeaderContainer>
-      <Logo>
-        <img src={logo} alt="logo" />
-      </Logo>
-      <Search>
-        <Title>Bookshelf</Title>
-        <Input onChange={e => setSearch(e.target.value)} type="text" placeholder="Search" />
-      </Search>
-      <Login>
-        <Name>Andres Perez</Name>
-        <Circle>
-          <img src="" alt="" />
-        </Circle>
-      </Login>
-      <SearchMobile>
-        <Title>Bookshelf</Title>
-        <Input type="text" placeholder="Search" />
-      </SearchMobile>
-    </HeaderContainer>
-  );
+class Header extends Component {
+  render() {
+    return (
+      <HeaderContainer>
+        <Logo>
+          <img src={logo} alt="logo" />
+        </Logo>
+        <Search>
+          <Title>Bookshelf</Title>
+          <Input onChange={e =>this.props.setSearch(e.target.value)} type="text" placeholder="Search" />
+        </Search>
+        <Login>
+          <Name>Andres Perez</Name>
+          <Circle>
+            <img src="" alt="" />
+          </Circle>
+        </Login>
+        <SearchMobile>
+          <Title>Bookshelf</Title>
+          <Input type="text" placeholder="Search" />
+        </SearchMobile>
+      </HeaderContainer>
+    );
+  }
 }
 
 const HeaderContainer = styled.header`
@@ -126,7 +126,7 @@ const Input = styled.input`
 
   ::-webkit-input-placeholder {
     color: black;
-    font-family: 'Intro';
+    font-family: "Intro";
     font-size: 12px;
   }
 `;
@@ -177,9 +177,5 @@ const Circle = styled.span`
   border: 1px solid #6ec1e4;
   border-radius: 50%;
 `;
-
-Header.propTypes = {
-  setSearch: PropTypes.func.isRequired,
-};
 
 export default Header;

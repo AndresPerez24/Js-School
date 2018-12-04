@@ -1,36 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import TextTruncate from 'react-text-truncate';
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
+import TextTruncate from "react-text-truncate";
 
-function Popup(props) {
-  const { closeModal, selectedBook, isModalOpen } = props;
-  return (
-    <PopUp isModalOpen={isModalOpen}>
-      <PopupContainer>
-        <Button onClick={closeModal}>&#10006;</Button>
-        <Title>{selectedBook.title}</Title>
-        <Date>{selectedBook.publishedDate}</Date>
-        <Novel>
-          Novel by
-          {selectedBook.authors}
-        </Novel>
-        <Pages>
-          {selectedBook.pageCount}
-          {' '}
-          Pages
-        </Pages>
-        <Summary>Summary</Summary>
-        <TextTruncateSize line={6} truncateText="..." text={selectedBook.description} />
-      </PopupContainer>
-    </PopUp>
-  );
+class Popup extends Component {
+  render() {
+    const { closeModal, selectedBook, isModalOpen } = this.props;
+    return (
+      <PopUp isModalOpen={isModalOpen}>
+        <PopupContainer>
+          <Button onClick={closeModal}>&#10006;</Button>
+          <Title>{selectedBook.title}</Title>
+          <Date>{selectedBook.publishedDate}</Date>
+          <Novel>Novel by {selectedBook.authors}</Novel>
+          <Pages>{selectedBook.pageCount} Pages</Pages>
+          <Summary>Summary</Summary>
+          <TextTruncateSize
+            line={6}
+            truncateText="..."
+            text={selectedBook.description}
+          />
+        </PopupContainer>
+      </PopUp>
+    );
+  }
 }
-
-const modalOpen = css`
-  opacity: 1;
-  visibility: initial;
-`;
 
 const PopUp = styled.div`
   position: absolute;
@@ -43,7 +36,12 @@ const PopUp = styled.div`
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
-  ${props => (props.isModalOpen ? modalOpen : '')};
+  ${props => (props.isModalOpen ? modalOpen : "")}
+`;
+
+const modalOpen = css`
+  opacity: 1;
+  visibility: initial;
 `;
 
 const PopupContainer = styled.div`
@@ -108,24 +106,5 @@ const Date = styled.p`
 const TextTruncateSize = styled(TextTruncate)`
   font-size: 12px;
 `;
-
-Popup.defaultProps = {
-  selectedBook: {
-    title: '',
-    pageCount: 0,
-    authors: [],
-  },
-};
-
-Popup.propTypes = {
-  closeModal: PropTypes.func.isRequired,
-  isModalOpen: PropTypes.bool.isRequired,
-  selectedBook: PropTypes.shape({
-    title: PropTypes.string,
-    pageCount: PropTypes.number,
-    publishedDate: PropTypes.string,
-    authors: PropTypes.arrayOf(PropTypes.string.isRequired),
-  }),
-};
 
 export default Popup;

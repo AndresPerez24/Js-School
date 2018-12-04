@@ -16,19 +16,18 @@ function createMultipleBooks(req, resolve, reject) {
   async function getBook(url) {
     try {
       const content = await fetch(url).then(async res => res.json());
-      if(content) {
-        book.title = content.items[0].volumeInfo.title;
-        book.authors = content.items[0].volumeInfo.authors;
-        book.publisher = content.items[0].volumeInfo.publisher;
-        book.publishedDate = content.items[0].volumeInfo.publishedDate;
-        book.description = content.items[0].volumeInfo.description;
-        book.pageCount = content.items[0].volumeInfo.pageCount;
-        book.printType = content.items[0].volumeInfo.printType;
-        book.categories = content.items[0].volumeInfo.categories;
-        book.averageRating = content.items[0].volumeInfo.averageRating;
-        book.imageLink = content.items[0].volumeInfo.imageLinks.thumbnail;
-        book.language = content.items[0].volumeInfo.language;
-      }
+      book.title = content.items[0].volumeInfo.title;
+      book.authors = content.items[0].volumeInfo.authors;
+      book.publisher = content.items[0].volumeInfo.publisher;
+      book.publishedDate = content.items[0].volumeInfo.publishedDate;
+      book.description = content.items[0].volumeInfo.description;
+      book.pageCount = content.items[0].volumeInfo.pageCount;
+      book.printType = content.items[0].volumeInfo.printType;
+      book.categories = content.items[0].volumeInfo.categories;
+      book.averageRating = content.items[0].volumeInfo.averageRating;
+      book.imageLink = content.items[0].volumeInfo.imageLinks.thumbnail;
+      book.language = content.items[0].volumeInfo.language;
+
       book.save((err, bookStored) => {
         if (err) {
           reject(`Error saving the book ${bookStored.title}`);

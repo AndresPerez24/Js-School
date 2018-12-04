@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt-nodejs')
 const UserSchema = Schema({
     displayName: String,
     avatar: String,
-    password: { type: String },
+    password: { type: String, select: false},
     email: { type: String, unique: true, lowercase: true },
     signupDate: { type: Date, default: Date.now() },
     lastLogin: Date
@@ -15,18 +15,15 @@ const UserSchema = Schema({
 
 UserSchema.pre('save', function(next) {
     let user = this
-    console.log(user)
     if (!user.isModified('password')) return next()
 
     bcrypt.genSalt(10, (err, salt) => {
         if(err) return next(err)
 
         bcrypt.hash(user.password, salt, null, (err, hash) => {
-            console.log(user.password)
             if (err) return next(err)
 
             user.password = hash
-            console.log(hash)
             next()
         })
     })
