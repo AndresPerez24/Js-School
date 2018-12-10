@@ -1,0 +1,2 @@
+export const FETCH_BOOK = 'FETCH_BOOK';
+export const FETCH_BOOK_SUCCESS = 'FETCH_BOOK_SUCCESS';

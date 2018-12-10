@@ -1,0 +1,274 @@
+//Typography
+$font-family-sans-serif: "MinionPro", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-serif: Times New Roman, Times, serif !default;
+$font-family-base: $font-family-sans-serif;
+$font-family-icons: "Icon-family";
+
+$golden-ratio: 1.4;
+
+$font-size-base: 16px;
+$em-base: $font-size-base;
+$font-weight-base: 400;
+$font-size-larger: floor($font-size-base * 1.5); //24px
+$font-size-large: floor($font-size-base * 1.25); //20px
+$font-size-small: floor($font-size-base * 0.875); //14px
+$font-size-smaller: ceil($font-size-base * 0.75); //12px
+
+$font-size-h1: floor($font-size-base * 3); //48px
+$font-size-h2: ceil($font-size-base * 1.95); //30px
+$font-size-h3: ceil($font-size-base * 1); //18px
+$font-size-h4: ceil($font-size-base * 1.5); //24px
+$font-size-h5: ceil($font-size-base * 1.1); //18px
+$font-size-h6: ceil($font-size-base * 0.95); //15px
+
+$line-height-base: $golden-ratio;
+$line-height-computed: floor($font-size-base * $line-height-base);
+
+$base-spacing-unit: $line-height-computed;
+$half-spacing-unit: $line-height-computed / 2;
+
+$headings-font-family: 'IntroRustG-Base2Line';
+$headings-font-weight: 300;
+$headings-line-height: 1.1;
+$headings-color: inherit;
+
+// Components
+$line-height-large: 1.33;
+$line-height-small: 1.6;
+
+$border-radius-base: 4px;
+$border-radius-large: 5px;
+$border-radius-small: 3px;
+
+// Media Queries and grid settings
+$screen-extra-small: 321px!default;
+$screen-small: 620px!default;
+$screen-medium: 920px!default;
+$screen-large: 1020px!default;
+$screen-extra-large: 1220px!default;
+
+$screen: "only screen";
+$extra-small: "only screen and (min-width: #{$screen-extra-small})";
+$small: "only screen and (min-width: #{$screen-small})";
+$medium: "only screen and (min-width: #{$screen-medium})";
+$large-max: "only screen and (max-width: #{$screen-large - 1})";
+$small-max: "only screen and (max-width: #{$screen-small - 1})";
+$medium-max: "only screen and (max-width: #{$screen-medium - 1})";
+$large: "only screen and (min-width: #{$screen-large})";
+$extra-large: "only screen and (min-width: #{$screen-extra-large})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+
+$use-silent-classes: false!default;
+$gutter: $base-spacing-unit!default;
+$push: false!default;
+$pull: false!default;
+
+$breakpoints: (
+    "extra-large" "(min-width: #{$screen-extra-large})",
+    "large" "(min-width: #{$screen-large})",
+    "medium" "(min-width: #{$screen-medium})",
+    "small" "(min-width: #{$screen-small})",
+    "extra-small" "(min-width: #{$screen-extra-small})"
+  )!default;
+
+$breakpoint-has-widths: ("small", "medium", "large")!default;
+$breakpoint-has-push: ("small", "medium", "large")!default;
+$breakpoint-has-pull: ("small", "medium", "large")!default;
+
+$white: #ffffff;
+$black: #000000;
+$sand: #eab96a;
+$gunmetal: #485260;
+$greyish: #adadad;
+$pinkish-grey: #c6c6c6;
+$white-grey: #dddddd;
+$warm-grey: #939393;
+$light-grey: #485260;
+$dark-yellow-green: #6a9c00;
+$red: #c20000;
+$french-blue: #4267b2;
+
+
+
+$body-bg: $white;
+$color-text-body: $black;
+
+* {
+    box-sizing: border-box;
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  html {
+    font-size: $font-size-base;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+  
+    &.menu-active {
+      overflow: hidden;
+    }
+  }
+  
+  body {
+    background-size: 100%;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    color: $color-text-body;
+    background-color: $body-bg;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  
+  input,
+  button,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $black;
+    background: transparent;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  button {
+    transition: 0.3s;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: $black;
+    font-family: "Intro";
+    font-size: 12px;
+  }
+  
+  :-moz-placeholder {
+    color: $black;
+    font-family: "Intro";
+    font-size: 12px;
+    opacity: 1;
+  }
+  
+  ::-moz-placeholder {
+    color: $black;
+    font-family: "Intro";
+    font-size: 12px;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: $black;
+    font-family: "Intro";
+    font-size: 12px;
+  }
+  
+  ::-ms-input-placeholder {
+    color: $black;
+    font-family: "Intro";
+    font-size: 12px;
+  }
+  
+  ::placeholder {
+    color: $black;
+    font-family: "Intro";
+    font-size: 12px;
+  }
+  
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  text-rendering: optimizeLegibility;
+  margin-top: 0;
+  margin-bottom: $base-spacing-unit ;
+}
+
+h1,
+h2,
+h3 {
+  line-height: $line-height-large;
+}
+
+h4,
+h5,
+h6 {
+  line-height: $line-height-small;
+}
+
+h1 {
+  font-size: 29px;
+  @media #{$medium} {
+    font-size: $font-size-h1;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  font-family: 'Intro';
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+p {
+  margin: 0 0 $base-spacing-unit;
+}
+
+
+ul {
+  padding-inline-start: 20px;
+  @media #{$extra-large} {
+    padding-inline-start: 40px;
+  }
+}
+
+
+
+
